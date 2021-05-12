@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DetailCharacter from '../../components/app/presentation/detailCharacter';
 import { getCharactersId } from '../../services/rickAndMortyApi';
 import styles from '/src/components/app/presentation/characters.css';
 
@@ -28,11 +29,19 @@ export default class Details extends Component {
         return (
         <div className={styles.charDetailParent}>
             <div className={styles.charDetail}>
-                <p>{name}</p>
+                <DetailCharacter 
+                name={name}
+                image={image}
+                status={status}
+                species={species}
+                gender={gender}
+                />
+                
+                {/* <p>{name}</p>
                 <img src={image} alt={name} />
                 <p>Status: {status}</p>
                 <p>Species: {species}</p>
-                <p>Gender: {gender}</p>
+                <p>Gender: {gender}</p> */}
             </div>
         </div>
         )
