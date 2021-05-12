@@ -10,10 +10,10 @@ export default class CharactersContainer extends Component {
         loading: true,
     }
 
-    async componentDidMount() {
+    componentDidMount = async () => {
         const characters = await getCharacters();
         this.setState({
-            characters,
+            characters: characters,
             loading: false,
         });
     }
