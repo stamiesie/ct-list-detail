@@ -1,5 +1,12 @@
 import React from 'react';
+import CharactersContainer from '../../containers/charactersContainer';
+
+
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+    <CharactersContainer />
+    </>
+  )
 }
