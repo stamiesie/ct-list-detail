@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ListCharacter from '../components/app/presentation/listCharacter';
 import { getCharacters } from '../services/rickAndMortyApi';
+import '../components/app/presentation/characters.css';
 
 // Containers are Class based components
 

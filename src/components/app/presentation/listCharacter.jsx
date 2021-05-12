@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DetailCharacter from './detailCharacter';
 import { Link } from 'react-router-dom';
+import styles from '/src/components/app/presentation/characters.css';
 
 // destructure characters off of props
 const ListCharacter = ({ characters }) => (
-        <ul aria-label="characters">
+        <ul aria-label="characters" className={styles.charList}>
             {characters.map((character) => (
              <li key={character.id}>
-            <Link to={`/${character.id}`}>
+            <Link to={`/${character.id}`} className={styles.link}>
                  <DetailCharacter
                  name={character.name}
                  image={character.image}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DetailCharacter from '../../components/app/presentation/detailCharacter';
 import { getCharactersId } from '../../services/rickAndMortyApi';
+import styles from '/src/components/app/presentation/characters.css';
 
 // Containers are Class based components
 
@@ -26,12 +26,14 @@ export default class Details extends Component {
         if (loading) return <h1>Loading...</h1>;
 
         return (
-        <div>
-            <p>{name}</p>
-            <img src={image} alt={name} />
-            <p>Status: {status}</p>
-            <p>Species: {species}</p>
-            <p>Gender: {gender}</p>
+        <div className={styles.charDetailParent}>
+            <div className={styles.charDetail}>
+                <p>{name}</p>
+                <img src={image} alt={name} />
+                <p>Status: {status}</p>
+                <p>Species: {species}</p>
+                <p>Gender: {gender}</p>
+            </div>
         </div>
         )
         
